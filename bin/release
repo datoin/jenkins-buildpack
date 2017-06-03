@@ -4,5 +4,5 @@ cat << EOF
 addons: []
 config_vars: []
 default_process_types:
-  web: java -jar jenkins.war --httpPort=\$PORT
+  web: java -jar jetty-runner.jar --port $PORT --log $LOG --out $OUT rest-driver.war &
 EOF
